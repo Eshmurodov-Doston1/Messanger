@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigatioln"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.messanger.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_correspondenceFragment"
+            app:destination="@id/correspondenceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/correspondenceFragment"
+        android:name="com.example.messanger.fragments.CorrespondenceFragment"
+        android:label="fragment_correspondence"
+        tools:layout="@layout/fragment_correspondence" >
+        <action
+            android:id="@+id/action_correspondenceFragment_to_contaktsFragment"
+            app:destination="@id/contaktsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contaktsFragment"
+        android:name="com.example.messanger.fragments.ContaktsFragment"
+        android:label="fragment_contakts"
+        tools:layout="@layout/fragment_contakts" />
+</navigation>

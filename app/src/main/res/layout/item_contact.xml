@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.github.abdularis.civ.CircleImageView
+        android:id="@+id/image_contact"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        android:src="@drawable/ic_frame_11"
+        android:layout_width="60dp"
+        android:layout_height="60dp"/>
+    <TextView
+        android:id="@+id/name_contact"
+        app:layout_constraintTop_toTopOf="@id/image_contact"
+        app:layout_constraintLeft_toRightOf="@id/image_contact"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="0.65"
+        app:layout_constraintHorizontal_bias="0.2"
+        android:text="Eshmurodov Doston"
+        app:layout_constraintBottom_toTopOf="@id/phone_number"
+        android:textStyle="bold"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="#565D78"
+        android:maxLines="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/phone_number"
+        android:maxLines="1"
+        android:layout_width="0dp"
+        android:textSize="@dimen/_11sdp"
+        android:text="+998994206278"
+        app:layout_constraintTop_toBottomOf="@id/name_contact"
+        app:layout_constraintLeft_toLeftOf="@id/name_contact"
+        app:layout_constraintBottom_toBottomOf="@id/image_contact"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
