@@ -12,8 +12,8 @@ import com.squareup.picasso.Picasso
 class AdapterUser(var onItemClickListener: OnItemClickListener):ListAdapter<User,AdapterUser.Vh>(MyDiffUtill()) {
     inner class Vh(var itemUserRvBinding: ItemUserRvBinding):RecyclerView.ViewHolder(itemUserRvBinding.root){
         fun onBind(user: User,position: Int){
-            Picasso.get().load(user.userImage).into(itemUserRvBinding.image)
-            itemUserRvBinding.nameUser.text = "${user.name} ${user.surname}"
+            Picasso.get().load(user.accountImageUrl).into(itemUserRvBinding.image)
+            itemUserRvBinding.nameUser.text = user.getFulName()
 
             itemView.setOnClickListener {
                 onItemClickListener.itemClick(user,position)

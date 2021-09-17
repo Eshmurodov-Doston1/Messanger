@@ -1,34 +1,50 @@
 package com.example.messanger.models
 
+import android.text.TextUtils
 import java.io.Serializable
 
 class User:Serializable {
-    var name:String?=null
-    var surname:String?=null
-    var userInfo:String?=null
+    var firstName:String?=null
+    var lastName:String?=null
     var phoneNumber:String?=null
-    var userImage:String?=null
+    var bio:String?=null
+    var username:String?=null
+    var accountImageUrl:String?=null
     var email:String?=null
     var uid:String?=null
+    var lastSeenTimestamp:String?=null
+
+    fun getFulName():String{
+        return  if(TextUtils.isEmpty(lastName)){
+           "$firstName"
+        }else{
+            "$firstName $lastName"
+        }
+
+    }
+    constructor()
 
 
     constructor(
-        name: String?,
-        surname: String?,
-        userInfo: String?,
+        firstName: String?,
+        lastName: String?,
         phoneNumber: String?,
-        userImage: String?,
+        bio: String?,
+        username: String?,
+        accountImageUrl: String?,
         email: String?,
-        uid: String?
+        uid: String?,
+        lastSeenTimestamp: String?
     ) {
-        this.name = name
-        this.surname = surname
-        this.userInfo = userInfo
+        this.firstName = firstName
+        this.lastName = lastName
         this.phoneNumber = phoneNumber
-        this.userImage = userImage
+        this.bio = bio
+        this.username = username
+        this.accountImageUrl = accountImageUrl
         this.email = email
         this.uid = uid
+        this.lastSeenTimestamp = lastSeenTimestamp
     }
 
-    constructor()
 }

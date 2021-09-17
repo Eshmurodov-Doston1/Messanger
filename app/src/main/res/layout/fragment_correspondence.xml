@@ -74,7 +74,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"/>
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cons_my"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -142,6 +141,7 @@
             app:layout_constraintGuide_percent="0.85"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
+
         <ImageView
             android:id="@+id/send"
             android:padding="3dp"
@@ -155,4 +155,27 @@
             android:layout_width="30dp"
             android:layout_height="30dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--    <com.dewarder.holdinglibrary.HoldingButtonLayout-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:hbl_holding_view="@+id/start_record"-->
+<!--        android:background="@color/purple_200"-->
+<!--        app:hbl_icon="@drawable/ic_gallery"-->
+<!--        android:layout_width="match_parent"-->
+<!--        app:hbl_color="@color/black"-->
+<!--        app:hbl_cancel_color="@color/black"-->
+<!--        app:hbl_enabled="true"-->
+<!--        app:hbl_cancel_icon="@drawable/ic_gallery"-->
+<!--        app:hbl_second_radius="@dimen/_20sdp"-->
+<!--        android:layout_height="@dimen/_50sdp">-->
+<!--        <ImageView-->
+<!--            android:id="@+id/start_record"-->
+<!--            android:layout_width="48dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:scaleType="center"-->
+<!--            android:src="@drawable/ic_launcher_foreground"/>-->
+<!--    </com.dewarder.holdinglibrary.HoldingButtonLayout>-->
 </androidx.constraintlayout.widget.ConstraintLayout>

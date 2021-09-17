@@ -94,7 +94,8 @@ class UserActivity : AppCompatActivity() {
             val name = activityUserBinding.name.text.toString().trim()
             val surname = activityUserBinding.surname.text.toString().trim()
             val userInfo = activityUserBinding.userInfo.text.toString().trim()
-            val phone = activityUserBinding.phoneInput.text.toString().trim()
+            val phone = activityUserBinding.phoneInput.rawText.toString().trim()
+            var time = SimpleDateFormat("dd:MM.yyyy hh.MM",Locale.getDefault()).format(Date())
             if (name.isNotEmpty() && surname.isNotEmpty() && userInfo.isNotEmpty() && phone.isNotEmpty()){
                 if (imageUri!=null){
                     var dialog =  KProgressHUD.create(this)
@@ -112,7 +113,7 @@ class UserActivity : AppCompatActivity() {
                             downloadUrl?.addOnSuccessListener {
                                 dialog.dismiss()
                                 var imageUri = it.toString()
-                                    var user = User(name,surname,userInfo,phone,imageUri,firebaseAuth.currentUser?.email.toString(), uid)
+                                    var user = User(name,surname,phone,userInfo,name,imageUri,firebaseAuth.currentUser?.email.toString(),uid,time)
                                     referenceDatabase.addValueEventListener(object:ValueEventListener{
                                         override fun onDataChange(snapshot: DataSnapshot) {
                                             var listFilter = ArrayList<User>()

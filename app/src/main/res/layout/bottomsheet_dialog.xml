@@ -18,7 +18,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         app:layout_constraintTop_toBottomOf="@id/line"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_500sdp">
+        android:layout_height="@dimen/_400sdp">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_galery"
             android:layout_marginTop="10dp"
@@ -31,5 +31,20 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
+    <at.markushi.ui.CircleButton
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent1"
+        android:id="@+id/send_image"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.98"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:cb_color="#1485DF"
+        android:scaleType="center"
+        android:src="@drawable/ic_send"
+        android:cropToPadding="true"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

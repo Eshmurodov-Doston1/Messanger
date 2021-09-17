@@ -12,7 +12,7 @@ class ChatAdapter(var list: List<Message>,var uid:String):RecyclerView.Adapter<R
     inner class FromVh(var fromItemBinding: FromItemBinding):RecyclerView.ViewHolder(fromItemBinding.root){
         fun onBindFrom(message: Message,position: Int){
             fromItemBinding.fromText.text = message.message
-            fromItemBinding.time.text = message.date?.substring(message.date?.lastIndexOf(" ")!!)
+            fromItemBinding.time.text = message.timeStamp?.substring(message.timeStamp?.lastIndexOf(" ")!!)
             itemView.setOnLongClickListener {
 
                 true
@@ -22,16 +22,15 @@ class ChatAdapter(var list: List<Message>,var uid:String):RecyclerView.Adapter<R
     inner class ToVh(var toItemBinding: ToItemBinding):RecyclerView.ViewHolder(toItemBinding.root){
         fun onBindTo(message: Message,position: Int){
             toItemBinding.toText.text = message.message
-            toItemBinding.time.text = message.date?.substring(message.date?.lastIndexOf(" ")!!)
+            toItemBinding.time.text = message.timeStamp?.substring(message.timeStamp?.lastIndexOf(" ")!!)
             itemView.setOnLongClickListener {
-
                 true
             }
         }
     }
 
     override fun getItemViewType(position: Int): Int {
-       if (list[position].fromUid==uid){
+       if (list[position].idMessage==uid){
            return 1
        }
         return 2

@@ -77,7 +77,7 @@ class ChatFragment : Fragment() {
                 for (i in children){
                     val value = i.getValue(User::class.java)
                     var listFilter = ArrayList<User>()
-                    if (value!=null && value?.uid?.lowercase(Locale.getDefault()) !=firebaseAuth.uid?.lowercase(Locale.getDefault())){
+                    if (value!=null && value.uid?.lowercase(Locale.getDefault()) !=firebaseAuth.uid?.lowercase(Locale.getDefault())){
                         listUser.add(value)
                     }
                     if (value!=null && value?.uid?.lowercase(Locale.getDefault()) ==firebaseAuth.uid?.lowercase(Locale.getDefault())){
